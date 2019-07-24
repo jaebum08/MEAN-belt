@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 const uniqueValidator  = require('mongoose-unique-validator');
 
 var PetSchema = new mongoose.Schema({
-    name: {type: String, 
+    name: {type: String, unique:true, dropDups:true,
         required: [true,"Name is required"], 
         minlength: [3, "Name must be 3 or more characters!"]
     },

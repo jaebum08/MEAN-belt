@@ -16,8 +16,15 @@ export class NewPetComponent implements OnInit {
               private _router: Router) {}
 
   ngOnInit() {
+    this.newPet = {
+      name:"",
+      type:"",
+      description:"",
+    }
   }
   newPetForm(){
+    this.errorL= {};
+
     this._httpService.createPet(this.newPet)
     .subscribe(data=>{
       console.log(data);

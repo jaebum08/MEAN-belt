@@ -7,11 +7,12 @@ import { PetdetailsComponent } from './petdetails/petdetails.component';
 
 
 const routes: Routes = [
-  { path: '',component: PetListComponent },
-  { path: 'new',component: NewPetComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/pets' },
+  { path: 'pets',component: PetListComponent },
+  { path: 'pets/new',component: NewPetComponent },
   // use a colon and parameter name to include a parameter in the url
-  { path: 'edit/:id', component: EditPetComponent },
-  { path: 'details/:id', component: PetdetailsComponent}
+  { path: 'pets/edit/:id', component: EditPetComponent },
+  { path: 'pets/details/:id', component: PetdetailsComponent}
   // // the ** will catch anything that did not match any of the above routes
   // { path: '**', component: PageNotFoundComponent }
 ];

@@ -6,6 +6,7 @@
     <div *ngIf="errorL"class="row">
         <p *ngIf="errorL.errors.name"class="red">{{errorL.errors.name.message}}</p>
     </div>
+    <p style="color:red" *ngIf="uniqueError.unique">Author name already exists in database</p>
     <div *ngIf="newPet.name" class="row">
         <p *ngIf="newPet.name.length < 3" class="red">A Pets name must be 3 characters longer.</p>
     </div>

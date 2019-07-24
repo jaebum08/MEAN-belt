@@ -36,7 +36,7 @@ export class EditPetComponent implements OnInit {
         this.errorL = data['errors']
         console.log(this.errorL);
       }else{
-      this._router.navigate(['/details/'+this.id])
+      this._router.navigate(['/pets/details/'+this.id])
       }
     });
   }

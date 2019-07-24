@@ -4,7 +4,7 @@
     <h4>These Pets are looking for a home!</h4>
   </div>
   <div class="row">
-    <button [routerLink]="['/new']">Add a pet to the shelter</button>
+    <button [routerLink]="['/pets/new']">Add a pet to the shelter</button>
   </div>
   <br>
   <table class="table table-striped">
@@ -20,8 +20,8 @@
           <td>{{pet.name}}</td>
           <td>{{pet.type}}</td>
           <td>
-            <button [routerLink]="['/details/'+pet._id]">Details</button>
-            <button [routerLink]="['/edit/'+pet._id]">Edit</button>
+            <button [routerLink]="['/pets/details/'+pet._id]">Details</button>
+            <button [routerLink]="['/pets/edit/'+pet._id]">Edit</button>
           </td>
         </tr>
     </tbody>  
